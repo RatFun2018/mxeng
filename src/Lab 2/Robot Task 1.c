@@ -1,11 +1,5 @@
-//Example ATmega2560 Project
-//File: ATmega2560Project.c
-//An example file for second year mechatronics project
 
-//include this .c file's header file
 #include "../Robot.h"
-
-//static function prototypes, functions only called in this file
 
 int axisPin = 0;
 
@@ -13,14 +7,13 @@ bool prevButtonState;
 bool buttonState;
 
 int main(void) {
-  DDRA = 0xFF;//put PORTA into output mode
-  PORTA = 0;
-  
-  adc_init();
-  
-  
-  while(1) {
+	DDRA = 0xFF;
+	PORTA = 0;
 	
+	adc_init();
+	
+	while (true) {
+		
 	uint16_t analogButton = adc_read(2);
 	prevButtonState = buttonState;
 	buttonState = analogButton < 6;
@@ -41,8 +34,10 @@ int main(void) {
 	}
 	
 	_delay_ms(16);
-   
-   
-  }
-  return(1);
-}//end main 
+	
+	
+	}
+	
+	return 1;
+	
+}
