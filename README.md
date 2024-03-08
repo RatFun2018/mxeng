@@ -1,14 +1,20 @@
-### MCP - Visual Studio Code version
+# Microcontroller Project - Curtin University S12024
+Source code for the robots and controllers being programmed in Microcontroller Project.
 
-This directory contains all that is needed to set up and get started with the visual studio code version of the microcontroller project.
+## Project Structure
+The project is broken down into individual labs and individual tasks within those labs.
+The code for each lab is in `src/Lab *` and is split between `Robot.c` and `Controller.c`
+If the lab has only 1 task, the main function will be put in `Robot.c` or `Controller.c`, but if the lab has more than 1 task, the code will be split into separate C files which the `Robot.c` or `Controller.c` will `#include`.
 
-To get started follow the directions below
- - Download a zip of the repository which will contain the code and libraries used during the project
- - Extract the zip to a location you will work from for the project
- - If Visual Studio Code is not installed on your device go to https://code.visualstudio.com/Download and install Visual Studio Code
- - Open Visual Studio Code and select the extensions tab on the left (ctrl + shift + x) and install all of these which are not already installed; PlatformIO IDE, C/C++, C/C++ extension Pack, Serial Monitor and CMake.
- - After extensions are installed restart Visual Studio Code
- - Select the PlatformIO tab on the left, select open project and select the mcp-vs folder which contains the platformio.ini file, it should end in "MCP_VS-main\MCP_VS-main\mcp-vs"
- - Inside explorer (ctrl + shift + r) select the platformio.ini file and change the upload port to the port assigned to your arduino
-   - This can be found by running "mode" in the terminal
- - Add code to the Controller.c or Robot.c files then click build or upload under the controller or robot tasks in the platformIO tab
+Any files written as general purpose helper files will be put in the `lib` directory.
+
+## Required Extensions
+This project is designed to be written using the Visual Studio Code editor, along with the following extensions
+ - C/C++
+ - C/C++ Extension pack
+ - CMake
+ - PlatformIO IDE
+ - Serial Monitor
+
+## Building and uploading
+To upload the code to the robot or controller, first configure the platformio.ini file to include the source files from the respective lab. Then using the platformio tab in VSCode choose either Controller or Robot and press upload
