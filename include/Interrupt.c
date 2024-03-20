@@ -1,3 +1,4 @@
+#include "ATMEGA2560.h"
 #include "Interrupt.h"
 
 void (*int0Fun)();

@@ -2,8 +2,8 @@
 //File: ATmega2560Project.h
 //Author: Robert Howie
 
-#ifndef CONTROLLER_H_ //double inclusion guard
-#define CONTROLLER_H_
+#ifndef ATMEGA2560_H //double inclusion guard
+#define ATMEGA2560_H
 
 //include standard libraries
 #include <avr/io.h>

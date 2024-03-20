@@ -1,8 +1,6 @@
 #ifndef Interrupt
 #define Interrupt
 
-#include "Robot.h"
-
 #define LOW 0
 #define FALLING 1
 #define RISING 2

@@ -1,12 +1,11 @@
-#include "Robot.h"
-#include "../lib/Interrupt.h"
+#include "ATMEGA2560.h"
+#include "Interrupt.h"
 
 #define DEBOUNCE_DELAY 100
 
-void ButtonPressed();
-
 uint32_t previousButtonTime = 0;
 
+void ButtonPressed();
 
 int main(void) {
 	
@@ -19,7 +18,6 @@ int main(void) {
 	return 1;
 	
 }
-
 
 void ButtonPressed() {
 	

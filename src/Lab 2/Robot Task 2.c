@@ -1,5 +1,4 @@
-
-#include "../Robot.h"
+#include "ATMEGA2560.h"
 
 float strength = 1.0;
 int midPoint;
